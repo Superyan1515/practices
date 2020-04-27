@@ -1,0 +1,53 @@
+body {
+	font-family: 'Roboto', sans-serif;
+}
+.wrapper {
+	max-width: 1400px;
+	margin: 100px auto 0;
+}
+.title {
+	font-size: 24px;
+	font-weight: 700;
+	text-align: center;
+	margin-bottom: 60px;
+}
+.btn {
+	display: inline-block;
+	font-weight: 500;
+	text-transform: uppercase;
+	border-radius: 10px;
+	padding: 1em 3em;
+	cursor: pointer;
+}
+.btn--tomato {
+	background-color: tomato;
+	color: #fff;
+}
+
+/*подсвечивающийся курсор*/
+.btn--cursor-track {
+	position: relative;
+	appearance: none;
+	overflow: hidden;
+}
+.btn--cursor-track:before {
+	content: '';
+	position: absolute;
+	--size: 0;
+	top: var(--y);
+	left: var(--x);
+	width: var(--size);
+	height: var(--size);
+	background: radial-gradient(circle closest-side, #6a2619, transparent);
+	transform: translate(-50%,-50%);
+	transition: width 200ms easy, height 200ms easy;
+}
+.btn--cursor-track:hover:before {
+	--size: 200px;
+}
+.btn--cursor-track span {
+	position: relative;
+	pointer-events: none;
+}
+
+
