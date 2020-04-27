@@ -19,8 +19,8 @@ body {
 	padding: 1em 3em;
 	cursor: pointer;
 }
-.btn--tomato {
-	background-color: tomato;
+.btn--dark {
+	background-color: #5a3d38;
 	color: #fff;
 }
 
@@ -38,12 +38,12 @@ body {
 	left: var(--x);
 	width: var(--size);
 	height: var(--size);
-	background: radial-gradient(circle closest-side, #6a2619, transparent);
+	background: radial-gradient(circle closest-side, #eaff1a, transparent);
 	transform: translate(-50%,-50%);
 	transition: width 200ms easy, height 200ms easy;
 }
 .btn--cursor-track:hover:before {
-	--size: 200px;
+	--size: 140px;
 }
 .btn--cursor-track span {
 	position: relative;
